@@ -1,38 +1,122 @@
-# Trending Youtube Videos Analysis Project
+# Trending YouTube Videos Analysis Project
+
+Welcome to the Trending YouTube Videos Analysis Project repository! This project combines data engineering, data analytics, and cloud to analyze YouTube video trends based on categories and metrics, providing key insights for further exploration and reporting.
 
 ## Overview
 
-This project aims to securely manage, streamline, and perform analysis on the structured and semi-structured YouTube videos data based on the video categories and the trending metrics.
+This project aims to:
 
-This project is my introductory project that combines data engineering, data analytics, and cloud.
+- **Securely manage, streamline, and analyze YouTube data** to uncover trends.
+- Combine structured and semi-structured data into actionable insights.
+- Build a robust, scalable system leveraging cloud services.
+- Provide interactive reporting for key performance indicators (KPIs).
 
 ## Project Goals
 
-1. Data Ingestion — Build a mechanism to ingest data from different sources.
-2. ETL System — We are getting data in raw format, transforming this data into the proper format.
-3. Data lake — We will be getting data from multiple sources so we need centralized repo to store them.
-4. Scalability — As the size of our data increases, we need to make sure our system scales with it.
-5. Cloud — We can’t process vast amounts of data on our local computer so we need to use the cloud, in this case, we will use AWS.
-6. Reporting — Build a dashboard to analyze insights and deliver the KPIs needed by the data end consumers.
-
-## Services we will be using
-
-1. Amazon S3: Amazon S3 is an object storage service that provides manufacturing scalability, data availability, security, and performance.
-2. AWS IAM: This is nothing but identity and access management which enables us to manage access to AWS services and resources securely.
-3. AWS Glue: A serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development.
-4. AWS Lambda: Lambda is a computing service that allows programmers to run code without creating or managing servers.
-5. AWS Athena: Athena is an interactive query service for S3 in which there is no need to load data it stays in S3.
-6. Microsoft Power BI: Instead of Amazon Quicksight, this project used MS Power BI as the Business Intelligence tool.
-
-## Dataset Used
-
-This Kaggle dataset contains statistics (CSV files) on daily popular YouTube videos over the course of many months. There are up to 200 trending videos published every day for many locations. The data for each region is in its own file. The video title, channel title, publication time, tags, views, likes and dislikes, description, and comment count are among the items included in the data. A category_id field, which differs by area, is also included in the JSON file linked to the region.
-
-https://www.kaggle.com/datasets/datasnaek/youtube-new
+1. **Data Ingestion**: Implement a mechanism to securely and efficiently ingest data from different sources.
+2. **ETL System**: Process raw data into a clean and analyzable format.
+3. **Data Lake**: Centralized storage for multiple datasets in a single repository.
+4. **Scalability**: Ensure the system can handle increasing data volumes.
+5. **Cloud Integration**: Leverage AWS for scalable computing and data processing.
+6. **Reporting**: Create dashboards for analyzing insights and delivering KPIs to end consumers.
 
 ## Architecture Diagram
 
 <img src="architecture.jpeg">
+
+## Technologies and Services Used
+
+### **Amazon Web Services (AWS)**
+
+- **Amazon S3**: Object storage for centralized and scalable data management.
+- **AWS IAM**: Identity and access management for secure resource permissions.
+- **AWS Glue**: Serverless service for data integration and transformation.
+- **AWS Lambda**: Compute service for running code in a serverless environment.
+- **AWS Athena**: Interactive query service for analyzing data directly from S3.
+
+### **Other Tools**
+
+- **Microsoft Power BI**: Used as the primary business intelligence tool for visualization and reporting.
+
+## Dataset Used
+
+We used a dataset from Kaggle, which contains statistics on daily popular YouTube videos across regions. It includes details such as:
+
+- Video title, channel title, publication time, and tags.
+- Views, likes, dislikes, and comment counts.
+- Video description and category IDs.
+
+Dataset link: [YouTube Trending Dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new)
+
+## Project Structure
+
+- **/ETL_scripts**: Contains scripts for extracting, transforming, and loading data.
+- **/S3_data_storage**: Configuration for Amazon S3 buckets.
+- **/Glue_jobs**: Scripts and workflows for AWS Glue jobs.
+- **/Lambda_functions**: AWS Lambda function scripts for automation.
+- **/PowerBI_reports**: Power BI `.pbix` files for data visualization.
+- **README.md**: Overview of the project.
+
+## Getting Started
+
+### Prerequisites
+
+1. AWS account with access to S3, IAM, Glue, Lambda, and Athena.
+2. Microsoft Power BI Desktop.
+3. Basic understanding of SQL and cloud architecture.
+
+### Steps to Run
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/trending-youtube-analysis.git
+   ```
+
+2. **Data Ingestion**:
+
+   - Upload raw datasets to the designated S3 bucket.
+
+3. **ETL Process**:
+
+   - Use AWS Glue to transform and clean the data.
+   - Store the processed data in an organized S3 folder structure.
+
+4. **Query Data**:
+
+   - Use AWS Athena to run SQL queries on processed data stored in S3.
+
+5. **Reporting**:
+   - Load the queried data into Power BI.
+   - Explore insights using interactive dashboards.
+
+## Insights Provided
+
+- **Trending Metrics**: Analysis of top-performing videos by region and category.
+- **Engagement Analysis**: Trends in likes, dislikes, and comments.
+- **Category Insights**: Performance of different video categories over time.
+
+## Future Enhancements
+
+- Implement real-time data ingestion using AWS Kinesis.
+- Include sentiment analysis of video comments.
+- Expand the dashboard to cover regional comparisons.
+- Introduce correlation analysis between metrics such as views, likes, description, category, and comments to identify deeper relationships.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or collaboration, feel free to reach out:
+
+- **Email:** alexandersolizar@gmail.com
+- **GitHub:** [alexsolizar](https://github.com/alexsolizar)
+
+---
+
+We hope this project serves as a valuable resource for analyzing YouTube trends. Contributions are welcome!
 
 ## Credits
 
