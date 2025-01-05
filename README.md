@@ -50,12 +50,14 @@ Dataset link: [YouTube Trending Dataset](https://www.kaggle.com/datasets/datasna
 
 ## Project Structure
 
-- **/ETL_scripts**: Contains scripts for extracting, transforming, and loading data.
-- **/S3_data_storage**: Configuration for Amazon S3 buckets.
-- **/Glue_jobs**: Scripts and workflows for AWS Glue jobs.
-- **/Lambda_functions**: AWS Lambda function scripts for automation.
-- **/PowerBI_reports**: Power BI `.pbix` files for data visualization.
+- **/assets** Contains the images used in Power BI dashboard.
+- **/data:** Contains the csv file that was pulled in the current Athena instance.
+- **/report**: Power BI `.pbix` file for data visualization.
+- **architecture.jpeg**: The architecture diagram for this project.
+- **lambda_function.py**: AWS Lambda function script for automation.
+- **pyspark_code.py**: Script for AWS Glue jobs.
 - **README.md**: Overview of the project.
+- **s3_cli_command.sh**: Shell script for uploading data to S3 buckets.
 
 ## Getting Started
 
